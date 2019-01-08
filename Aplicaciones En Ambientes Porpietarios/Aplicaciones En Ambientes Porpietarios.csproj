@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED5E63F2-59E7-4362-878F-A7C9D7D4A5D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aplicaciones_En_Ambientes_Porpietarios</RootNamespace>
+    <AssemblyName>Aplicaciones En Ambientes Porpietarios</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.6.41832, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.6\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ConexcionBD">
+      <HintPath>..\ConexcionBD.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SoftwareII\login-master\FACTURA\WebFacturaMvc\bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-WPF, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Documents.Reporting.0.3.0\lib\net45\PdfSharp-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Xps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Documents.Reporting.0.3.0\lib\net45\PdfSharp.Xps.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.InversionOfControl.Abstractions, Version=0.1.2.21070, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.InversionOfControl.Abstractions.0.1.2\lib\portable-net45+win+MonoAndroid10+xamarinios10+MonoTouch10\System.InversionOfControl.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Documents.Reporting, Version=0.3.0.32397, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Documents.Reporting.0.3.0\lib\net45\System.Windows.Documents.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActualizarRecorrido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizarRecorrido.Designer.cs">
+      <DependentUpon>ActualizarRecorrido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProfesor.Designer.cs">
+      <DependentUpon>AgregarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ayuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayuda.Designer.cs">
+      <DependentUpon>Ayuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCurso.Designer.cs">
+      <DependentUpon>BuscarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarProfesor.Designer.cs">
+      <DependentUpon>BuscarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarRecorrido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarRecorrido.Designer.cs">
+      <DependentUpon>BuscarRecorrido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCurso.Designer.cs">
+      <DependentUpon>CrearCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearEstudiante.Designer.cs">
+      <DependentUpon>CrearEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearFactura.Designer.cs">
+      <DependentUpon>CrearFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearParticipante.Designer.cs">
+      <DependentUpon>CrearParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTaller.Designer.cs">
+      <DependentUpon>CrearTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearTallerista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTallerista.Designer.cs">
+      <DependentUpon>CrearTallerista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearTurista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearTurista.Designer.cs">
+      <DependentUpon>CrearTurista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cursos.Designer.cs">
+      <DependentUpon>Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCurso.Designer.cs">
+      <DependentUpon>EliminarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarGuia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarGuia.Designer.cs">
+      <DependentUpon>EliminarGuia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProfesor.Designer.cs">
+      <DependentUpon>EliminarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarTaller.Designer.cs">
+      <DependentUpon>BuscarTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturaccion.Designer.cs">
+      <DependentUpon>Facturaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarCurso.Designer.cs">
+      <DependentUpon>ModificarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarEstudiante.Designer.cs">
+      <DependentUpon>ModificarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarGuia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarGuia.Designer.cs">
+      <DependentUpon>ModificarGuia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarParticipante.Designer.cs">
+      <DependentUpon>ModificarParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarProfesor.Designer.cs">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTaller.Designer.cs">
+      <DependentUpon>ModificarTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTallerista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTallerista.Designer.cs">
+      <DependentUpon>ModificarTallerista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTurista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTurista.Designer.cs">
+      <DependentUpon>ModificarTurista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloClientes.Designer.cs">
+      <DependentUpon>ModuloClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuloCultura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloCultura.Designer.cs">
+      <DependentUpon>ModuloCultura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoEstudiante.Designer.cs">
+      <DependentUpon>NuevoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoGuia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoGuia.Designer.cs">
+      <DependentUpon>NuevoGuia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporteProfesoresCurso.cs">
+      <DependentUpon>reporteProfesoresCurso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reporteProfesoresCurso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteProfesoresCurso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesAlumnos.Designer.cs">
+      <DependentUpon>ReportesAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesHorarios.Designer.cs">
+      <DependentUpon>ReportesHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesProfesores.Designer.cs">
+      <DependentUpon>ReportesProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turismo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turismo.Designer.cs">
+      <DependentUpon>Turismo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turismo2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turismo2.Designer.cs">
+      <DependentUpon>Turismo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidarSoloLetrasSoloNumeros.cs" />
+    <Compile Include="VentanaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaLogin.Designer.cs">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ActualizarRecorrido.resx">
+      <DependentUpon>ActualizarRecorrido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProfesor.resx">
+      <DependentUpon>AgregarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCurso.resx">
+      <DependentUpon>BuscarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarProfesor.resx">
+      <DependentUpon>BuscarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarRecorrido.resx">
+      <DependentUpon>BuscarRecorrido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCurso.resx">
+      <DependentUpon>CrearCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearEstudiante.resx">
+      <DependentUpon>CrearEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearFactura.resx">
+      <DependentUpon>CrearFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearParticipante.resx">
+      <DependentUpon>CrearParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearTaller.resx">
+      <DependentUpon>CrearTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearTallerista.resx">
+      <DependentUpon>CrearTallerista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearTurista.resx">
+      <DependentUpon>CrearTurista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cursos.resx">
+      <DependentUpon>Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCurso.resx">
+      <DependentUpon>EliminarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarGuia.resx">
+      <DependentUpon>EliminarGuia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProfesor.resx">
+      <DependentUpon>EliminarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarTaller.resx">
+      <DependentUpon>BuscarTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturaccion.resx">
+      <DependentUpon>Facturaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarCurso.resx">
+      <DependentUpon>ModificarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarEstudiante.resx">
+      <DependentUpon>ModificarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarGuia.resx">
+      <DependentUpon>ModificarGuia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarParticipante.resx">
+      <DependentUpon>ModificarParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarProfesor.resx">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTaller.resx">
+      <DependentUpon>ModificarTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTallerista.resx">
+      <DependentUpon>ModificarTallerista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTurista.resx">
+      <DependentUpon>ModificarTurista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloClientes.resx">
+      <DependentUpon>ModuloClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuloCultura.resx">
+      <DependentUpon>ModuloCultura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoEstudiante.resx">
+      <DependentUpon>NuevoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoGuia.resx">
+      <DependentUpon>NuevoGuia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteHorario.rdlc" />
+    <EmbeddedResource Include="ReportesAlumnos.resx">
+      <DependentUpon>ReportesAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesHorarios.resx">
+      <DependentUpon>ReportesHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesProfesores.resx">
+      <DependentUpon>ReportesProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteProfesores.rdlc" />
+    <EmbeddedResource Include="Turismo.resx">
+      <DependentUpon>Turismo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turismo2.resx">
+      <DependentUpon>Turismo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaLogin.resx">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="reporteProfesoresCurso.xsc">
+      <DependentUpon>reporteProfesoresCurso.xsd</DependentUpon>
+    </None>
+    <None Include="reporteProfesoresCurso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reporteProfesoresCurso.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reporteProfesoresCurso.xss">
+      <DependentUpon>reporteProfesoresCurso.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
